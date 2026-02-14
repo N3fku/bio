@@ -3,28 +3,46 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2a9b3f;
-    background: linear-gradient(90deg, rgba(42, 155, 63, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(134, 237, 83, 1) 100%);
-    font-family: Arial;
+    background-image: url(tlo.gif);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    font-family: "Arial", sans-serif;
+    overflow: hidden;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url(tlo.gif) center/cover no-repeat;
+    filter: blur(15px);
+    z-index: -1;
 }
 
 .kontener{
-    background-image: url(Nowy\ projekt.png);
+    background: rgba(0,9,0,0.5);
     width: 350px;
     height: 500px;
     text-align: center;
     border-radius: 20px;
+    box-shadow: 0 0 10px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .kolo{
     margin-top: 20px;
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    box-shadow: 0 0 10px 5px rgb(128, 191, 105);
+    box-shadow: 0 0 10px 1px;
 }
 h2,p{
     color: white;
+    text-shadow: 0 0 10px #a855f7;
 }
 p{
     font-size: 15px;
@@ -37,33 +55,46 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    line-height: 45px;
 }
 
 .link{
     width: 85%;
     height: 45px;
-    background-color: white;
+    background-color: rgb(0, 0, 0, 0.7);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: black;
+    color: white;
     text-decoration: none;
     transition: 0.3s ease;
+    border: 2px solid white;
 }
 
 .link:hover{
-    background-color: rgb(180, 177, 177);
-    transform: scale(1.03);
+    background-color: #503592;
+    transform: scale(1.05);
 }
 
 .sociale{
-    margin-top: 25px;
-    height: 30px;
+    margin-top: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
+    gap: 35px;
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.sociale a{
+    font-size: 30px;
+    color: white;
     transition: 0.3s ease;
+    text-shadow: 0 0 10px #a855f7;
+}
+
+.sociale a:hover{
+    transform: scale(1.2);
+    color: #503592;
 }
